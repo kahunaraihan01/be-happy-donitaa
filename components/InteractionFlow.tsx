@@ -205,7 +205,7 @@ const TicTacToeStep = ({ onComplete }: { onComplete: () => void }) => {
             className="flex flex-col items-center justify-center space-y-10 relative z-10"
         >
             <h2 className="text-4xl font-playfair text-white text-center drop-shadow-lg max-w-xs whitespace-pre-line leading-tight">
-                {winner === 'X' ? "Kamu Memenangkan" : message}
+                {winner === 'X' ? "You Won" : message}
             </h2>
             <div className="grid grid-cols-3 gap-3 p-4 bg-white/5 backdrop-blur-md rounded-3xl border border-white/10 shadow-2xl">
                 {board.map((square, i) => (
@@ -217,7 +217,7 @@ const TicTacToeStep = ({ onComplete }: { onComplete: () => void }) => {
                         <AnimatePresence mode="wait">
                             {square === 'X' ? (
                                 <motion.div
-                                    key={winner === 'X' ? "heart" : "x"}
+                                    key={winner === 'X' ? "Heart" : "x"}
                                     initial={{ scale: 0 }}
                                     animate={{ scale: 1 }}
                                     transition={winner === 'X' ? { delay: i * 0.15, type: 'spring' } : {}}
@@ -244,7 +244,7 @@ const TicTacToeStep = ({ onComplete }: { onComplete: () => void }) => {
                         animate={{ opacity: 1, y: 0 }}
                         className="text-4xl font-playfair text-white text-center drop-shadow-lg mt-4"
                     >
-                        Hatiku
+                        My Heart
                     </motion.h2>
                 )}
             </AnimatePresence>
@@ -340,7 +340,7 @@ const LoveMeterStep = ({ onComplete }: { onComplete: () => void }) => {
 
 // --- Step 4: Typewriter ---
 const TypewriterStep = ({ onComplete }: { onComplete: () => void }) => {
-    const text = "Happy Everyday Donitaaa!!!!🤗🤗";
+    const text = "Be Happy Everyday Donitaaa!!!🤗🤗";
     const [displayedText, setDisplayedText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
 
